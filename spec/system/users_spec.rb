@@ -31,7 +31,7 @@ RSpec.describe "Users", type: :system do
     # トップページに遷移する
     visit root_path
     # ログインしていない場合、サインインページに遷移していることを確認する
-    # expect(current_path).to eq(new_user_session_path)
+    expect(current_path).to eq(new_user_session_path)
     # 誤ったユーザー情報を入力する
     fill_in 'user_email', with: 'test'
     fill_in 'user_password', with: 'test'
